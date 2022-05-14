@@ -1,12 +1,10 @@
-#Teknofest icin aggbhh20 tarafindan yazildi(toplantiyi unuttugum icin pardon)
 import speech_recognition as sr
-#speechrecognition libini importluyo
-srRec = sr.Recognizer() #sr libinin recognizer functionunu cagiriyo
+srRec = sr.Recognizer()
 print("recognized")
-smbm = sr.AudioFile("smbmbutai.wav")#dosyayi aliyo(.wav)
+smbm = sr.AudioFile("voice.wav")
 print("got wav file")
 with smbm as source:
-    audio = srRec.record(source) #audio yu initliyo
-recdaudio = srRec.recognize_google(audio) #printlemek için var a atiyo
-print(recdaudio)#cevirilmis audioyu printliyo
+    audio = srRec.record(source)
+recdaudio = srRec.recognize_google(audio)
+print(recdaudio)
 print("should have reccd audio")
